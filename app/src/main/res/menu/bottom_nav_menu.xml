@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_explore"
+        android:icon="@drawable/explore"
+        android:title="Explore" />
+    <item
+        android:id="@+id/navigation_connection"
+        android:icon="@drawable/connection"
+        android:title="Connections" />
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/chat"
+        android:title="Chat" />
+    <item
+        android:id="@+id/contact"
+        android:icon="@drawable/contact"
+        android:title="Contacts" />
+    <item
+        android:id="@+id/navigation_group"
+        android:icon="@drawable/group"
+        android:title="Groups" />
+</menu>

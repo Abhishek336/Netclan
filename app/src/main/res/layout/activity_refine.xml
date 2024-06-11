@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RefineActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back Icon"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Refine"
+                android:paddingStart="16dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:padding="16dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Availability"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/dropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/availability_array"
+                android:paddingBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add your status"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/textInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Hi community, I am open to new connections."
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:gravity="top|start"
+                android:textSize="14sp"
+                android:paddingBottom="16dp"
+                android:minLines="8"
+                android:background="@drawable/edittext_border"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Hyper Local Distance"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:min="1"
+                android:max="100"
+                android:paddingBottom="16dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Purpose"
+                android:paddingBottom="8dp"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ToggleButton
+                    android:id="@+id/toggleButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Coffee"
+                    android:textOn="Coffee"
+                    android:background="@drawable/toggle_button_background_selector"
+                    android:textColor="@drawable/toggle_button_text_color_selector"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_margin="8dp"/>
+
+                <ToggleButton
+                    android:id="@+id/toggleButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Business"
+                    android:textOn="Business"
+                    android:background="@drawable/toggle_button_background_selector"
+                    android:textColor="@drawable/toggle_button_text_color_selector"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_margin="8dp"/>
+
+                <ToggleButton
+                    android:id="@+id/toggleButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Hobbies"
+                    android:textOn="Hobbies"
+                    android:background="@drawable/toggle_button_background_selector"
+                    android:textColor="@drawable/toggle_button_text_color_selector"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_margin="8dp"/>
+
+                <ToggleButton
+                    android:id="@+id/toggleButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Friendship"
+                    android:textOn="Friendship"
+                    android:background="@drawable/toggle_button_background_selector"
+                    android:textColor="@drawable/toggle_button_text_color_selector"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_margin="8dp"/>
+                <ToggleButton
+                    android:id="@+id/toggleButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Movies"
+                    android:textOn="Movies"
+                    android:background="@drawable/toggle_button_background_selector"
+                    android:textColor="@drawable/toggle_button_text_color_selector"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_margin="8dp"/>
+                <ToggleButton
+                    android:id="@+id/toggleButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Dinning"
+                    android:textOn="Dinning"
+                    android:background="@drawable/toggle_button_background_selector"
+                    android:textColor="@drawable/toggle_button_text_color_selector"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_margin="8dp"/>
+                <ToggleButton
+                    android:id="@+id/toggleButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Dating"
+                    android:textOn="Dating"
+                    android:background="@drawable/toggle_button_background_selector"
+                    android:textColor="@drawable/toggle_button_text_color_selector"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_margin="8dp"/>
+                <ToggleButton
+                    android:id="@+id/toggleButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Matrimony"
+                    android:textOn="Matrimony"
+                    android:background="@drawable/toggle_button_background_selector"
+                    android:textColor="@drawable/toggle_button_text_color_selector"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_margin="8dp"/>
+            </GridLayout>
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save n Explore "
+                android:layout_marginTop="16dp"/>
+        </GridLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
